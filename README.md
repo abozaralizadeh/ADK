@@ -22,7 +22,7 @@ source .venv/bin/activate  # On Windows: .venv\\Scripts\\activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file (or export the variables) before running agents. Example:
+Create a `.env` file (or export the variables) before running agents. For the Azure sample, start from the template: `cp oai_multi_agent/.env.example oai_multi_agent/.env`. Example:
 ```bash
 AZURE_API_BASE="https://YOUR-RESOURCE.openai.azure.com/"
 AZURE_API_KEY="YOUR-AZURE-KEY"
@@ -35,6 +35,7 @@ Never commit real keys.
 - CLI chat (recommended during development):
   - `adk run my_adk_agent` for the Gemini sample.
   - `adk run oai_multi_agent` for the Azure OpenAI sample.
+  - `adk run adk_yml_agent` for the YAML-defined agent.
 - Web UI (for quick testing; development use only):
   - `adk web --port 8000` then pick the agent folder from the dropdown.
 
